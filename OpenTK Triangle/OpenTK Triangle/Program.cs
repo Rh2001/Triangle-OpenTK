@@ -35,15 +35,9 @@ class Program
 
     public static float[] sendVertices(string shape) 
     {
-        if (shape.ToLower() == "triangle")
+        if (shape.ToLower() == "square" || shape.ToLower() == "rectangle")
         {
-            return new float[] {
-                    0f , 0.5f, 0f,
-                    0.5f, -0.5f, 0f,
-                   -0.5f,-0.5f, 0f};
-        }
-        else 
-        {
+           
             return new float[]{
                 0.5f,  0.5f, 0.0f,  // top right
                 0.5f, -0.5f, 0.0f,  // bottom right
@@ -51,6 +45,15 @@ class Program
                -0.5f,  0.5f, 0.0f   // top left
 };
         }
-        
+        else
+        {
+            return new float[] {
+                    0f , 0.5f, 0f,
+                    0.5f, -0.5f, 0f,
+                   -0.5f,-0.5f, 0f};
+
+        }
+
     }
+        
 }

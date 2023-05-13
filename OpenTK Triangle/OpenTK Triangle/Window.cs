@@ -143,7 +143,7 @@ namespace OpenTK_Triangle
          
 
 
-            if (Program.shape.ToLower() == "square")
+            if (Program.shape.ToLower() == "square" || Program.shape.ToLower() == "rectangle")
             {
                 int _elementBufferObject = GL.GenBuffer();
                 GL.BindBuffer(BufferTarget.ElementArrayBuffer, _elementBufferObject);
@@ -175,7 +175,7 @@ namespace OpenTK_Triangle
             GL.BindVertexArray(_vertexArrayObject);
 
             //which shape to draw
-            if (Program.shape.ToLower() == "square")
+            if (Program.shape.ToLower() == "square" || Program.shape.ToLower() == "rectangle")
                 GL.DrawElements(PrimitiveType.Triangles, indices.Length, DrawElementsType.UnsignedInt, 0);
             else
                 GL.DrawArrays(PrimitiveType.Triangles, 0, 3);
