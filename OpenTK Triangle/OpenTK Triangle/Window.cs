@@ -95,7 +95,7 @@ namespace OpenTK_Triangle
         }
 
 
-        //gets the vertices for both a square and a triangle depending on user input, if the input is null it instead draws a perpendicular triangle using the square vertices
+        //gets the vertices for both a square and a triangle depending on user input.
         private void GetVertices()
         {
             if (Program.shape.ToLower() != null)
@@ -165,9 +165,9 @@ namespace OpenTK_Triangle
             float timeValue = (float)GLFW.GetTime() / 5.0f;
             
             //define RGB colors to change according to time
-            float red = (MathF.Sin(timeValue * 2.0f) + 1.0f) / 2.0f;
-            float green = (MathF.Sin(timeValue * 3.0f) + 1.0f) / 2.0f;
-            float blue = (MathF.Sin(timeValue * 4.0f) + 1.0f) / 2.0f;
+            red = (MathF.Sin(timeValue * 2.0f) + 1.0f) / 2.0f;
+            green = (MathF.Sin(timeValue * 3.0f) + 1.0f) / 2.0f;
+            blue = (MathF.Sin(timeValue * 4.0f) + 1.0f) / 2.0f;
 
             //get the uniform color from our shader
             int vertexColor = GL.GetUniformLocation(_shaderProgram,"currentColor");
